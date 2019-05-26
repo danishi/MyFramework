@@ -1,0 +1,9 @@
+[MySQL]
+HOST_NAME = "localhost"
+DB_NAME   = "sample_user"
+USER      = "sample_user"
+PASSWORD  = "sample_pass"
+
+[S3]
+ACCESS_KEY = ""
+SECRET_KEY = ""

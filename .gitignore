@@ -1,0 +1,6 @@
+/vendor/
+/logs/
+/app/view/view_c/
+/.vscode/
+*.log
+*.ini
