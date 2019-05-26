@@ -29,9 +29,9 @@ class mytable extends model
      */
     public function getAll():array {
         $sql  = <<< EOF
-        SELECT *
-        FROM {$this->name}
-        EOF;
+SELECT *
+FROM {$this->name}
+EOF;
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -49,12 +49,12 @@ class mytable extends model
      */
     public function insert(array $param) {
         $sql  = <<< EOF
-        INSERT INTO {$this->name}(
-            name
-        )VALUES(
-            :name
-        )
-        EOF;
+INSERT INTO {$this->name}(
+    name
+)VALUES(
+    :name
+)
+EOF;
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -70,9 +70,9 @@ class mytable extends model
      */
     public function delete(array $param) {
         $sql  = <<< EOF
-        DELETE FROM {$this->name}
-        WHERE id = :id
-        EOF;
+DELETE FROM {$this->name}
+WHERE id = :id
+EOF;
 
         try {
             $stmt = $this->pdo->prepare($sql);
