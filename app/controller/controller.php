@@ -44,6 +44,11 @@ class controller
      * @return string
      */
     public function view(string $template, array $param): string{
+
+        header_register_callback(function(){
+            header_remove('X-Powered-By');
+        });
+
         $Smarty = new Smarty();
         $Smarty->template_dir = __DIR__ . '/../view/';
         $Smarty->compile_dir  = __DIR__ . '/../view/view_c/';
