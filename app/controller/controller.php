@@ -47,6 +47,7 @@ class controller
 
         header_register_callback(function(){
             header_remove('X-Powered-By');
+            header("X-FRAME-OPTIONS: DENY");
         });
 
         $Smarty = new Smarty();
