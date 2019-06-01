@@ -53,7 +53,8 @@ class controller
         $Smarty = new Smarty();
         $Smarty->template_dir = __DIR__ . '/../view/';
         $Smarty->compile_dir  = __DIR__ . '/../view/view_c/';
-        $Smarty->escape_html  = true;
+        $Smarty->config_dir   = __DIR__ . '/../view/config/';
+        $Smarty->escape_html  = false;
         $Smarty->assign([
             'cssUnCache'    => Utility::cssUnCache()
         ]);
