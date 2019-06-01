@@ -58,6 +58,7 @@ abstract class controller
         $Smarty->assign([
             'cssUnCache'    => Utility::cssUnCache(),
             'url'           => Utility::getUrl(),
+            'baseUrl'       => Utility::getBaseUrl(),
         ]);
         $Smarty->assign($param);
         return $Smarty->fetch($template . '.tpl');

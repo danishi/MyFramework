@@ -52,4 +52,16 @@ final class Utility{
         $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         return $url;
     }
+
+    /**
+     * getBaseUrl
+     * @return string
+     */
+    public static function getBaseUrl(): string{
+        $array_parse_uri = explode('/', $_SERVER['REQUEST_URI']);
+        $last_uri        = end($array_parse_uri);
+        $parse_uri       = str_replace($last_uri, '', $_SERVER['REQUEST_URI']);
+        $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$parse_uri;
+        return $url;
+    }
 }
