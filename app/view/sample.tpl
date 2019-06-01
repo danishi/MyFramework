@@ -1,5 +1,6 @@
 <!DOCTYPE>
 <html lang="ja">
+{config_load file='smarty.config'}
 <head>
 {include file='template/head_tag.tpl'}
 </head>

@@ -56,7 +56,8 @@ abstract class controller
         $Smarty->config_dir   = __DIR__ . '/../view/config/';
         $Smarty->escape_html  = false;
         $Smarty->assign([
-            'cssUnCache'    => Utility::cssUnCache()
+            'cssUnCache'    => Utility::cssUnCache(),
+            'url'           => Utility::getUrl(),
         ]);
         $Smarty->assign($param);
         return $Smarty->fetch($template . '.tpl');

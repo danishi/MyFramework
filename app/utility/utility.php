@@ -43,4 +43,13 @@ final class Utility{
             return '';
         }
     }
+
+    /**
+     * getUrl
+     * @return string
+     */
+    public static function getUrl(): string{
+        $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        return $url;
+    }
 }
