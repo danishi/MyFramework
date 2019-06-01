@@ -14,7 +14,7 @@ use app\utility\utility;
  *
  * @author danishi
  */
-class model
+abstract class model
 {
     private $name   = 'model';
     public $pdo;
@@ -23,7 +23,7 @@ class model
         try{
             switch(strtoupper($dbms)){
                 case 'MYSQL':
-                    $dsn       = 'mysql:dbname=' . Utility::getIniValue('MYSQL', 'DB_NAME') 
+                    $dsn       = 'mysql:dbname=' . Utility::getIniValue('MYSQL', 'DB_NAME')
                                . ';host=' . Utility::getIniValue('MYSQL', 'HOST_NAME');
                     $user      = Utility::getIniValue('MYSQL', 'USER');
                     $password  = Utility::getIniValue('MYSQL', 'PASSWORD');
@@ -36,7 +36,7 @@ class model
                     $this->pdo = new PDO('sqlite:' . $db_path);
                     break;
             }
-            
+
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         }catch(Exception $e){
@@ -47,7 +47,7 @@ class model
     public function __toString():string {
         return $this->name;
     }
-    
+
     /**
      * Logging
      * @param string $message

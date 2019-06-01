@@ -14,12 +14,12 @@ use app\utility\utility;
  *
  * @author danishi
  */
-class controller
+abstract class controller
 {
     private $name   = 'controller';
 
-    protected function __construct(){
-        // impossible new
+    public function __construct(){
+        date_default_timezone_set('Asia/Tokyo');
     }
 
     public function __toString():string {
