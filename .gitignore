@@ -1,5 +1,7 @@
-/vendor/
-/logs/
+/vendor/*
+!.gitkeep
+/logs/*
+!.gitkeep
 /app/view/view_c/
 /.vscode/
 *.log
